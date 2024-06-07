@@ -1,3 +1,59 @@
 @tailwind base;
 @tailwind utilities;
 @tailwind components;
+
+@layer utilities {
+  .main {
+    @apply bg-primary-300 
+    mx-auto my-auto px-8 py-8 max-w-screen-md
+    border-2 border-primary-200 rounded-md 
+    flex flex-col gap-4 justify-between
+  }
+
+  .button {
+    @apply bg-primary-400 
+    border-2 border-primary-200 rounded-md py-2 
+    px-8 m-auto 
+    shadow-primary-100 shadow-md 
+    text-primary-100 text-xl 
+  }
+  .button:hover{
+    @apply bg-gray-100 shadow-sm
+  }
+
+  .label {
+    @apply text-primary-100 text-2xl font-medium
+  }
+  .input {
+    @apply bg-primary-400 
+    w-full py-1 
+    rounded-lg border-primary-200 border-2 
+    text-primary-100 text-center text-2xl outline-none
+    shadow-md shadow-primary-100
+  }
+  .input:placeholder {
+    @apply text-primary-200 text-center
+  }
+  .input:hover{
+    @apply bg-gray-100 shadow-sm
+  }
+
+  .select {
+    @apply bg-primary-400 
+    w-full py-1 rounded-lg border-primary-200 border-2 
+    text-primary-100 text-center text-2xl outline-none
+    shadow-md shadow-primary-100
+  }
+  .select:placeholder {
+    @aplay text-primary-200 text-center  
+  }
+  .select:hover{
+    @apply bg-gray-100 shadow-sm
+  }
+}
+
+@media (max-width: 650px) {
+  .main {
+    @apply mx-4 my-auto py-16
+  }
+}
